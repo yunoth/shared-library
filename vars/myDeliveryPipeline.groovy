@@ -25,7 +25,7 @@ def call(Map pipelineParams) {
             }
             stage('Archive') {
                 steps {
-                    archiveArtifacts "./target/*.jar"
+                    archiveArtifacts "target/*.jar"
                 }
             }
 
