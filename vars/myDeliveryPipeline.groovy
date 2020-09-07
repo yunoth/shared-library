@@ -24,10 +24,8 @@ def call(Map pipelineParams) {
                 }
             }
 
-            stage('deploy developmentServer'){
-                steps {
-                    deploy(pipelineParams.developmentServer, pipelineParams.serverPort)
-                }
+            stage('Archive') {
+                archiveArtifacts "./target/*.jar"
             }
 
             stage('deploy staging'){
