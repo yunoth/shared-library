@@ -1,7 +1,7 @@
 def call(Map pipelineParams) {
 
     pipeline {
-        agent any
+        agent { label 'jenkins-slave' }
         stages {
             stage('checkout git') {
                 steps {
