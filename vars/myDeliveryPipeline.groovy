@@ -31,7 +31,7 @@ def call(Map pipelineParams) {
 
             stage('deploy staging'){
                 steps {
-                    deploy(pipelineParams.stagingServer, pipelineParams.serverPort)
+                    sh 'echo deploying'
                 }
             }
 
