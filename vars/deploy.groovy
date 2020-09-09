@@ -6,6 +6,6 @@ def call(def server, def port) {
     }
     retry (3) {
         sleep 5
-        httpRequest url:"http://${server}:${port}", validResponseCodes: '200,404', validResponseContent: '"status":"UP"'
+        httpRequest url:"http://${server}:${port}/services/UMSL/", validResponseCodes: '200', validResponseContent: '"status":"UP"'
     }
 }
